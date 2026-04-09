@@ -1,0 +1,175 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\config.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:config.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\PC_3\\db.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PC_3\\db.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\PC_2\\control_semaforos.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PC_2\\control_semaforos.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\PC_2\\analisis.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PC_2\\analisis.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\PC_1\\broker_mq.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PC_1\\broker_mq.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\sensores.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:sensores.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\PC_1\\sensor_espira.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PC_1\\sensor_espira.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\PC_1\\sensor_camara.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PC_1\\sensor_camara.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\common\\utils.py||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:common\\utils.py||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "db.py",
+              "DocumentMoniker": "C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\PC_3\\db.py",
+              "RelativeDocumentMoniker": "PC_3\\db.py",
+              "ToolTip": "C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\PC_3\\db.py",
+              "RelativeToolTip": "PC_3\\db.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-04-09T04:56:44.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "control_semaforos.py",
+              "DocumentMoniker": "C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\PC_2\\control_semaforos.py",
+              "RelativeDocumentMoniker": "PC_2\\control_semaforos.py",
+              "ToolTip": "C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\PC_2\\control_semaforos.py",
+              "RelativeToolTip": "PC_2\\control_semaforos.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-04-09T04:56:01.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "analisis.py",
+              "DocumentMoniker": "C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\PC_2\\analisis.py",
+              "RelativeDocumentMoniker": "PC_2\\analisis.py",
+              "ToolTip": "C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\PC_2\\analisis.py",
+              "RelativeToolTip": "PC_2\\analisis.py",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwEIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-04-09T04:52:25.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "broker_mq.py",
+              "DocumentMoniker": "C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\PC_1\\broker_mq.py",
+              "RelativeDocumentMoniker": "PC_1\\broker_mq.py",
+              "ToolTip": "C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\PC_1\\broker_mq.py",
+              "RelativeToolTip": "PC_1\\broker_mq.py",
+              "ViewState": "AgIAAAcAAAAAMzMzMzMLwBcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-04-09T04:51:42.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "config.py",
+              "DocumentMoniker": "C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\config.py",
+              "RelativeDocumentMoniker": "config.py",
+              "ToolTip": "C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\config.py",
+              "RelativeToolTip": "config.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-04-08T14:49:43.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "sensores.py",
+              "DocumentMoniker": "C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\sensores.py",
+              "RelativeDocumentMoniker": "sensores.py",
+              "ToolTip": "C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\sensores.py",
+              "RelativeToolTip": "sensores.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-04-09T04:50:54.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "sensor_espira.py",
+              "DocumentMoniker": "C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\PC_1\\sensor_espira.py",
+              "RelativeDocumentMoniker": "PC_1\\sensor_espira.py",
+              "ToolTip": "C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\PC_1\\sensor_espira.py",
+              "RelativeToolTip": "PC_1\\sensor_espira.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-04-08T16:45:05.456Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "sensor_camara.py",
+              "DocumentMoniker": "C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\PC_1\\sensor_camara.py",
+              "RelativeDocumentMoniker": "PC_1\\sensor_camara.py",
+              "ToolTip": "C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\PC_1\\sensor_camara.py",
+              "RelativeToolTip": "PC_1\\sensor_camara.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-04-08T16:38:01.276Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "utils.py",
+              "DocumentMoniker": "C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\common\\utils.py",
+              "RelativeDocumentMoniker": "common\\utils.py",
+              "ToolTip": "C:\\Users\\TORREZ\\source\\repos\\Proyecto_Distribuidos\\common\\utils.py",
+              "RelativeToolTip": "common\\utils.py",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAgvQ0AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2026-04-08T16:29:06.274Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
