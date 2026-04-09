@@ -1,3 +1,4 @@
+# config.py
 BROKER_SUB_ADDRESS = "tcp://localhost:5556"
 BROKER_PUB_ADDRESS = "tcp://*:5557"
 

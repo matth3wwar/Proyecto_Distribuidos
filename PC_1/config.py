@@ -1,0 +1,14 @@
+BROKER_SUB_ADDRESS = "tcp://192.168.11.10:5556"
+BROKER_PUB_ADDRESS = "tcp://*:5557"
+
+ANALYTICS_SUB_ADDRESS = "tcp://192.168.11.15:5557"
+
+DB_MAIN_ADDRESS = "tcp://localhost:5558"   # PC3
+DB_REPLICA_ADDRESS = "tcp://localhost:5560" # PC2
+
+TRAFFIC_CONTROL_ADDRESS = "tcp://localhost:5559"
+
+GRID_ROWS = ["A", "B", "C"]
+GRID_COLS = [1, 2, 3]
+
+DEFAULT_GREEN_TIME = 15
