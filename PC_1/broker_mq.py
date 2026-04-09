@@ -20,5 +20,5 @@ print("Broker activo...")
 
 while True:
     message = frontend.recv()
-    print("Broker recibió:", message.decode())
+    print("Broker recibio:", message.decode())
     backend.send(message)

@@ -5,22 +5,27 @@
 # analisis.py
 import zmq
 import json
-from config import ANALYTICS_SUB_ADDRESS, DB_PUSH_ADDRESS, TRAFFIC_PUSH_ADDRESS
+from config import ANALYTICS_SUB_ADDRESS, DB_PUSH_ADDRESS, DB_REPLICA_PUSH_ADDRESS, TRAFFIC_PUSH_ADDRESS
 
 context = zmq.Context()
 
-# Recibe datos del broker
+# broker
 sub_socket = context.socket(zmq.SUB)
 sub_socket.connect(ANALYTICS_SUB_ADDRESS)
 sub_socket.setsockopt_string(zmq.SUBSCRIBE, "camara")
 sub_socket.setsockopt_string(zmq.SUBSCRIBE, "espira")
 sub_socket.setsockopt_string(zmq.SUBSCRIBE, "gps")
 
-# Enviar a BD principal
+# BD principal
 push_db = context.socket(zmq.PUSH)
 push_db.connect(DB_PUSH_ADDRESS)
 
-# Enviar a control de semáforos
+# BD replica
+push_db_r = context.socket(zmq.PUSH)
+push_db_r.connect(DB_REPLICA_PUSH_ADDRESS)
+
+
+# Control de semáforos
 push_traffic = context.socket(zmq.PUSH)
 push_traffic.connect(TRAFFIC_PUSH_ADDRESS)
 
@@ -55,8 +60,9 @@ while True:
 
     print("Analítica procesó:", evento)
 
-    # guardar en BD
+    # guardar en BD's
     push_db.send_json(evento)
+    push_db_r.send_json(evento)
 
     # tomar decisión sobre semáforo
     if estado == "CONGESTION":
