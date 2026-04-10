@@ -7,14 +7,16 @@ import zmq
 
 context = zmq.Context()
 
+from config import BROKER_SUB_ADDRESS, BROKER_PUB_ADDRESS
+
 frontend = context.socket(zmq.SUB)
-frontend.bind("tcp://*:5556")
+frontend.bind(BROKER_SUB_ADDRESS)
 frontend.setsockopt_string(zmq.SUBSCRIBE, "camara")
 frontend.setsockopt_string(zmq.SUBSCRIBE, "espira")
 frontend.setsockopt_string(zmq.SUBSCRIBE, "gps")
 
 backend = context.socket(zmq.PUB)
-backend.bind("tcp://*:5557")
+backend.bind(BROKER_PUB_ADDRESS)
 
 print("Broker activo...")
 

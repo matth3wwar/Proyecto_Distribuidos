@@ -1,0 +1,5 @@
+{"sensor_id": "ESP-INT_B2", "tipo_sensor": "espira_inductiva", "interseccion": "INT_B2", "vehiculos_contados": 14, "intervalo_segundos": 30, "timestamp_inicio": 1775793543.405749, "timestamp_fin": 1775793573.405749, "estado": "NORMAL", "topic": "espira"}
+{"sensor_id": "CAM-INT_B2", "tipo_sensor": "camara", "interseccion": "INT_B2", "volumen": 1, "velocidad_promedio": 26, "timestamp": 1775793545.4062316, "estado": "NORMAL", "topic": "camara"}
+{"sensor_id": "ESP-INT_B2", "tipo_sensor": "espira_inductiva", "interseccion": "INT_B2", "vehiculos_contados": 10, "intervalo_segundos": 30, "timestamp_inicio": 1775793547.4068096, "timestamp_fin": 1775793577.4068096, "estado": "NORMAL", "topic": "espira"}
+{"sensor_id": "GPS-INT_B1", "tipo_sensor": "gps", "interseccion": "INT_B1", "nivel_congestion": "BAJA", "velocidad_promedio": 8, "timestamp": 1775793549.4074214, "estado": "CONGESTION", "topic": "gps"}
+{"sensor_id": "CAM-INT_A2", "tipo_sensor": "camara", "interseccion": "INT_A2", "volumen": 5, "velocidad_promedio": 24, "timestamp": 1775793551.4081805, "estado": "NORMAL", "topic": "camara"}

@@ -1,12 +1,12 @@
 # db.py
 import zmq
 import json
-from config import DB_BIND_ADDRESS
+from config import DB_PUSH_ADDRESS
 
 context = zmq.Context()
 
 socket = context.socket(zmq.PULL)
-socket.bind(DB_BIND_ADDRESS)
+socket.bind(DB_PUSH_ADDRESS)
 
 print("Base de datos activa...")
 
