@@ -1,12 +1,12 @@
 ##############################################################################
 #
-#
+# sensores.py - Generador de eventos de sensores
 ################################################################################
-# sensores.py
 import zmq
 import time
 import json
 import random
+from datetime import datetime
 from config import BROKER_SUB_ADDRESS, INTERSECCIONES, SENSOR_INTERVAL
 
 context = zmq.Context()
@@ -33,13 +33,17 @@ def generate_camera_event(interseccion, congestion_level=0):
         volumen = random.randint(0, 8)
         velocidad = random.randint(20, 60)
     
+    timestamp_unix = time.time()
+    timestamp_legible = datetime.fromtimestamp(timestamp_unix).isoformat()
+    print(f"[SENSORES] prioridad=CRITICA | timestamp={timestamp_unix} | timestamp_legible={timestamp_legible}")
     return {
         "sensor_id": f"CAM-{interseccion}",
         "tipo_sensor": "camara",
         "interseccion": interseccion,
         "volumen": volumen,
         "velocidad_promedio": velocidad,
-        "timestamp": time.time()
+        "timestamp": timestamp_unix,
+        "timestamp_legible": timestamp_legible
     }
 
 def generate_espira_event(interseccion, congestion_level=0):
@@ -51,7 +55,9 @@ def generate_espira_event(interseccion, congestion_level=0):
         vehiculos = random.randint(18, 25)
     else:
         vehiculos = random.randint(5, 20)
-        
+    timestamp_unix = time.time()
+    timestamp_legible = datetime.fromtimestamp(timestamp_unix).isoformat()
+    print(f"[SENSORES] prioridad=CRITICA | timestamp={timestamp_unix} | timestamp_legible={timestamp_legible}")
     return {
         "sensor_id": f"ESP-{interseccion}",
         "tipo_sensor": "espira_inductiva",
@@ -59,7 +65,8 @@ def generate_espira_event(interseccion, congestion_level=0):
         "vehiculos_contados": vehiculos,
         "intervalo_segundos": 30,
         "timestamp_inicio": inicio,
-        "timestamp_fin": inicio + 30
+        "timestamp_fin": inicio + 30,
+        "timestamp_legible": timestamp_legible
     }
 
 def generate_gps_event(interseccion, congestion_level=0):
@@ -73,13 +80,18 @@ def generate_gps_event(interseccion, congestion_level=0):
         velocidad = random.randint(20, 50)
         nivel = "ALTA" if velocidad > 40 else ("NORMAL" if velocidad >= 20 else "BAJA")
 
+    timestamp_unix = time.time()
+    timestamp_legible = datetime.fromtimestamp(timestamp_unix).isoformat()
+    print(f"[SENSORES] prioridad=CRITICA | timestamp={timestamp_unix} | timestamp_legible={timestamp_legible}")
+    
     return {
         "sensor_id": f"GPS-{interseccion}",
         "tipo_sensor": "gps",
         "interseccion": interseccion,
         "nivel_congestion": nivel,
         "velocidad_promedio": velocidad,
-        "timestamp": time.time()
+        "timestamp": timestamp_unix,
+        "timestamp_legible": timestamp_legible
     }
 
 def generate_ambulance_event(fila, motivo="emergencia medica"):
@@ -87,6 +99,9 @@ def generate_ambulance_event(fila, motivo="emergencia medica"):
     Genera un evento de ambulancia solicitando paso en una fila específica
     """
     intersecciones_fila = [f"INT_{fila}a", f"INT_{fila}b", f"INT_{fila}c", f"INT_{fila}d", f"INT_{fila}e"]
+    timestamp_unix = time.time()
+    timestamp_legible = datetime.fromtimestamp(timestamp_unix).isoformat()
+    
     return {
         "sensor_id": f"AMBULANCIA-{fila}",
         "tipo_sensor": "ambulancia",
@@ -94,7 +109,8 @@ def generate_ambulance_event(fila, motivo="emergencia medica"):
         "intersecciones": intersecciones_fila,
         "motivo": motivo,
         "prioridad": "CRITICA",
-        "timestamp": time.time()
+        "timestamp": timestamp_unix,
+        "timestamp_legible": timestamp_legible
     }
 
 elapsed = 0

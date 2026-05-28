@@ -236,7 +236,7 @@ python consultas.py
 python sensores.py
 ```
 
-⚠️ **IMPORTANTE**: El orden es crítico. Iniciar sensores al final, ya que eso marca el inicio del cronograma de eventos.
+Iniciar sensores al final, ya que eso empieza cronograma de eventos.
 
 ## Salida Esperada
 
@@ -276,6 +276,74 @@ python sensores.py
 
 - **`PC_3/db.json`**: Eventos guardados en BD principal (vacío después de t=140s)
 - **`PC_2/db_replica.json`**: Eventos guardados en BD réplica (completo, toma control a t=140s)
+
+## Sistema de Medición de Desempeño
+
+El sistema incluye un conjunto completo de herramientas para medir y evaluar desempeño:
+
+### Métricas Implementadas
+
+1. **Métrica 1: Eventos Almacenados en Bases de Datos**
+   - Cuenta eventos persistidos en BD principal y réplica
+   - Desglose por tipo de sensor y por intersección
+   - Criterio: Mínimo 80 eventos en principal, 100+ en réplica
+
+2. **Métrica 2: Tiempo de Reacción (Analítica → Semáforo)**
+   - Latencia desde detección de congestión hasta comando ejecutado
+   - Criterio: Promedio < 500ms, máximo < 2000ms
+   - Estadísticas: promedio, mínimo, máximo por intersección
+
+3. **Métrica 3: Eventos Especiales (Congestión, Ambulancias)**
+   - Verificación de detección correcta en INT_2b (60s) e INT_3d (95s)
+   - Verificación de prioridad de ambulancias (130s, 150s)
+   - Criterio: Todos detectados y procesados correctamente
+
+4. **Métrica 4: Tolerancia a Fallos (Fallover BD)**
+   - Cambio automático a BD réplica a los 140s
+   - Captura de eventos post-fallo
+   - Criterio: Diferencia > 10 eventos post-fallo
+
+### Herramientas de Medición
+
+- **`metrics.py`**: Motor principal de cálculo de métricas
+- **`event_tracker.py`**: Rastreador centralizado con timestamps precisos
+- **`analyze_logs.py`**: Analizador de logs de consola
+- **`run_test_with_metrics.py`**: Script automatizado con generación de reporte
+
+### Procedimiento de Medición
+
+```bash
+# Opción 1: Automatizado (recomendado)
+python run_test_with_metrics.py
+
+# Opción 2: Manual después de ejecutar prueba
+python -c "from metrics import generate_metrics_report; generate_metrics_report()"
+```
+
+### Archivos Generados por Métricas
+
+- **`METRICS_REPORT.md`**: Reporte completo con todas las métricas
+- **`events_trace.jsonl`**: Trazas de eventos con timestamps precisos
+- **`LOG_ANALYSIS_REPORT.md`**: Análisis detallado de logs
+
+### Documentación de Métricas
+
+- **`METRICS_GUIDE.md`**: Guía detallada del sistema de medición
+- **`METRICS_QUICK_START.md`**: Guía rápida para interpretación
+- **`METRICS_SUMMARY.md`**: Resumen ejecutivo de resultados
+
+### Criterios de Éxito
+
+```
+✓ ACEPTABLE si:
+  - BD Principal ≥ 80 eventos
+  - BD Réplica ≥ 100 eventos
+  - Latencia promedio < 500ms
+  - Congestión detectada en INT_2b y INT_3d
+  - Ambulancias priorizadas correctamente
+  - Fallover BD automático sin pérdida
+  - Todos los criterios en checklist: OK
+```
 
 ## Validaciones de Prueba
 
