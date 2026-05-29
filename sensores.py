@@ -157,20 +157,47 @@ while True:
         topic = "gps"
 
     socket.send_string(topic + " " + json.dumps(event))
-    print(f"[{elapsed:.1f}s] Sensor envió {topic}: {interseccion}")
+    
+    # Mostrar detalles del evento en consola
+    timestamp_legible = event.get("timestamp_legible", "N/A")
+    sensor_id = event.get("sensor_id", "N/A")
+    
+    if topic == "camara":
+        volumen = event.get("volumen", "N/A")
+        velocidad = event.get("velocidad_promedio", "N/A")
+        print(f"[{timestamp_legible}] [SENSOR] CAMARA: {sensor_id} en {interseccion} - Volumen: {volumen}, Velocidad: {velocidad} km/h")
+    elif topic == "espira":
+        vehiculos = event.get("vehiculos_contados", "N/A")
+        print(f"[{timestamp_legible}] [SENSOR] ESPIRA: {sensor_id} en {interseccion} - Vehículos: {vehiculos}")
+    elif topic == "gps":
+        velocidad = event.get("velocidad_promedio", "N/A")
+        nivel = event.get("nivel_congestion", "N/A")
+        print(f"[{timestamp_legible}] [SENSOR] GPS: {sensor_id} en {interseccion} - Velocidad: {velocidad} km/h, Nivel: {nivel}")
     
     # Primera ambulancia en fila 1 a los 130s
     if 130 <= elapsed <= 132 and not ambulance_1_sent:
         ambulance_event = generate_ambulance_event("1", "Emergencia médica - Ambulancia 1")
         socket.send_string("ambulancia " + json.dumps(ambulance_event))
-        print(f"[{elapsed:.1f}s] AMBULANCIA SOLICITANDO PASO en Fila 1")
+        timestamp_legible = ambulance_event.get("timestamp_legible", "N/A")
+        sensor_id = ambulance_event.get("sensor_id", "N/A")
+        fila = ambulance_event.get("fila", "N/A")
+        motivo = ambulance_event.get("motivo", "N/A")
+        intersecciones = ", ".join(ambulance_event.get("intersecciones", []))
+        print(f"\n[{timestamp_legible}] [AMBULANCIA] {sensor_id} - Fila: {fila}, Motivo: {motivo}")
+        print(f"[{timestamp_legible}]              Intersecciones: {intersecciones}\n")
         ambulance_1_sent = True
     
     # Segunda ambulancia en fila 1 a los 150s
     if 150 <= elapsed <= 152 and not ambulance_2_sent:
         ambulance_event = generate_ambulance_event("1", "Emergencia médica - Ambulancia 2")
         socket.send_string("ambulancia " + json.dumps(ambulance_event))
-        print(f"[{elapsed:.1f}s] AMBULANCIA SOLICITANDO PASO en Fila 1 (2da ambulancia)")
+        timestamp_legible = ambulance_event.get("timestamp_legible", "N/A")
+        sensor_id = ambulance_event.get("sensor_id", "N/A")
+        fila = ambulance_event.get("fila", "N/A")
+        motivo = ambulance_event.get("motivo", "N/A")
+        intersecciones = ", ".join(ambulance_event.get("intersecciones", []))
+        print(f"\n[{timestamp_legible}] [AMBULANCIA] {sensor_id} - Fila: {fila}, Motivo: {motivo}")
+        print(f"[{timestamp_legible}]              Intersecciones: {intersecciones}\n")
         ambulance_2_sent = True
     
     time.sleep(SENSOR_INTERVAL)

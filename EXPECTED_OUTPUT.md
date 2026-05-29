@@ -19,28 +19,28 @@ Este archivo muestra los logs esperados durante la ejecución del sistema de pru
 [SEMÁFOROS] Control de semáforos activo...
 [SEMÁFOROS] Tiempo verde normal: 15s
 
-[1.2s] 🚦 Comando para INT_1b:
-[1.2s]    ✓ Estado: VERDE
-[1.2s]    ✓ Motivo: Tráfico normal
+[1.2s] Comando para INT_1b:
+[1.2s] Estado: VERDE
+[1.2s] Motivo: Tráfico normal
 
-[60.1s] 🚦 Comando para INT_2b:
-[60.1s]    ✓ Estado: VERDE_EXTENDIDO (15s + 10s extra)
-[60.1s]    ✓ Motivo: Congestión detectada por camara
+[60.1s] Comando para INT_2b:
+[60.1s]  Estado: VERDE_EXTENDIDO (15s + 10s extra)
+[60.1s] Motivo: Congestión detectada por camara
 
-[95.2s] 🚦 Comando para INT_3d:
-[95.2s]    ✓ Estado: VERDE_EXTENDIDO (15s + 10s extra)
-[95.2s]    ✓ Motivo: Congestión detectada por espira
+[95.2s] Comando para INT_3d:
+[95.2s] Estado: VERDE_EXTENDIDO (15s + 10s extra)
+[95.2s]  Motivo: Congestión detectada por espira
 
-[130.3s] 🚦 Comando para INT_1a:
-[130.3s]    ✓ Estado: VERDE PRIORITARIO (AMBULANCIA)
-[130.3s]    ✓ Motivo: Ambulancia solicitando paso - Emergencia médica - Ambulancia 1
+[130.3s] Comando para INT_1a:
+[130.3s] Estado: VERDE PRIORITARIO (AMBULANCIA)
+[130.3s] Motivo: Ambulancia solicitando paso - Emergencia médica - Ambulancia 1
 
-[130.3s] 🚦 Comando para INT_1b:
-[130.3s]    ✓ Estado: VERDE PRIORITARIO (AMBULANCIA)
+[130.3s] Comando para INT_1b:
+[130.3s] Estado: VERDE PRIORITARIO (AMBULANCIA)
 ...
-[150.1s] 🚦 Comando para INT_1a:
-[150.1s]    ✓ Estado: VERDE PRIORITARIO (AMBULANCIA)
-[150.1s]    ✓ Motivo: Ambulancia solicitando paso - Emergencia médica - Ambulancia 2
+[150.1s] Comando para INT_1a:
+[150.1s] Estado: VERDE PRIORITARIO (AMBULANCIA)
+[150.1s] Motivo: Ambulancia solicitando paso - Emergencia médica - Ambulancia 2
 ```
 
 ## Terminal 3: PC2 - Base de Datos Réplica

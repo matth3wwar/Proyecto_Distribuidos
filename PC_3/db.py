@@ -42,8 +42,10 @@ while True:
         evento_tipo = data.get("tipo_sensor", "desconocido")
         interseccion = data.get("interseccion", "DESCONOCIDA")
         estado = data.get("estado", "DESCONOCIDO")
+        timestamp_legible = data.get("timestamp_legible", "N/A")
+        sensor_id = data.get("sensor_id", "N/A")
         
-        print(f"[{elapsed:.1f}s] [DB PRINCIPAL] Guardando evento: {evento_tipo} en {interseccion} -> {estado}")
+        print(f"[{timestamp_legible}] [DB PRINCIPAL] {evento_tipo.upper()}: {sensor_id} en {interseccion} -> {estado}")
         
         # Guardar en db.json
         with open("db.json", "a", encoding="utf-8") as f:

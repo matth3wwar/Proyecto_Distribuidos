@@ -35,8 +35,12 @@ while True:
             interseccion = evento.get("interseccion", "N/A")
             sensor_id = evento.get("sensor_id", "N/A")
             
-            # Mostrar información completa y legible
-            print(f"[BROKER] [{timestamp_legible}] Retransmitiendo {tipo_sensor.upper()} - {sensor_id} en {interseccion}")
+            if tipo_sensor.lower() == "ambulancia":
+                fila = evento.get("fila", "N/A")
+                motivo = evento.get("motivo", "N/A")
+                print(f"[{timestamp_legible}] [BROKER] [AMBULANCIA] {sensor_id} - Fila {fila}: {motivo}")
+            else:
+                print(f"[{timestamp_legible}] [BROKER] [{tipo_sensor.upper()}] {sensor_id} en {interseccion}")
         else:
             print(f"[BROKER] Retransmitiendo: {message_decoded}")
     except (json.JSONDecodeError, ValueError, KeyError) as e:

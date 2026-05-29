@@ -2,6 +2,7 @@
 import zmq
 import json
 import time
+from datetime import datetime
 from config import QUERY_PULL_ADDRESS
 
 context = zmq.Context()
@@ -20,42 +21,51 @@ def get_elapsed_time():
 
 def enviar_consulta(tipo_consulta, parametros=None):
     """Envía una consulta al servicio de analítica"""
+    timestamp_unix = time.time()
+    timestamp_legible = datetime.fromtimestamp(timestamp_unix).isoformat()
+    
     consulta = {
         "tipo": tipo_consulta,
         "parametros": parametros or {},
-        "timestamp": time.time(),
+        "timestamp": timestamp_unix,
+        "timestamp_legible": timestamp_legible,
         "origen": "PC3_CONSULTAS"
     }
     
     try:
         push_socket.send_json(consulta)
         elapsed = get_elapsed_time()
-        print(f"[{elapsed:.1f}s] [CONSULTAS] [OK] Consulta enviada: {tipo_consulta}")
+        print(f"[{timestamp_legible}] [CONSULTAS] [OK] Consulta enviada: {tipo_consulta}")
         return True
     except Exception as e:
         elapsed = get_elapsed_time()
-        print(f"[{elapsed:.1f}s] [CONSULTAS] [ERROR] Error al enviar consulta: {e}")
+        timestamp_legible = datetime.fromtimestamp(time.time()).isoformat()
+        print(f"[{timestamp_legible}] [CONSULTAS] [ERROR] Error al enviar consulta: {e}")
         return False
 
 def enviar_comando_semaforo(interseccion, accion, duracion=None):
     """Envía un comando directo para cambiar estado de un semáforo"""
+    timestamp_unix = time.time()
+    timestamp_legible = datetime.fromtimestamp(timestamp_unix).isoformat()
+    
     comando = {
         "tipo": "comando_directo_semaforo",
         "interseccion": interseccion,
         "accion": accion,
         "duracion": duracion,
-        "timestamp": time.time(),
+        "timestamp": timestamp_unix,
+        "timestamp_legible": timestamp_legible,
         "origen": "PC3_USUARIO"
     }
     
     elapsed = get_elapsed_time()
-    print(f"[{elapsed:.1f}s] [CONSULTAS] [COMANDO] Comando directo de usuario: {interseccion} -> {accion}")
+    print(f"[{timestamp_legible}] [CONSULTAS] [COMANDO] Comando de usuario: {interseccion} -> {accion} ({duracion}s)")
     
     try:
         push_socket.send_json(comando)
         return True
     except Exception as e:
-        print(f"[{elapsed:.1f}s] [CONSULTAS] [ERROR] Error al enviar comando: {e}")
+        print(f"[{timestamp_legible}] [CONSULTAS] [ERROR] Error al enviar comando: {e}")
         return False
 
 # Simular consultas periódicas
